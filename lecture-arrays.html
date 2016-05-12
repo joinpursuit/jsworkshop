@@ -23,8 +23,38 @@
     
     <h2>What is an array?</h2>
     <p>
-      An array in JavaScript is a <b>datastructure</b>
+      An array in JavaScript is a <b>data structure</b> that contains an <b>ordered collection</b> of <b>elements</b>. Each element is numbered starting at <code>0</code>, this is called the <b>index</b>.
     </p>
+    
+    <img src="http://www.introprogramming.info/wp-content/uploads/2013/07/clip_image00213_thumb.png">
+    
+    <p>
+      Remember how variables were like labeled boxes? Imagine if we lined up a bunch of boxes next to each other, and now we can use how far they are from the "first" box (let's assume the first box is the one on the far left) as their label. An array is a <b>numbered list of variables</b>.
+    </p>
+    
+    <pre><code>var myFirstArray = []
+var anArrayWithNumbersInIt = [1, 1, 2, 3, 5, 8, 13, 21]
+var anArrayWithStringsInIt = ["pizza", "burgers", "pho", "bao", "curry", ]
+var anArrayWithRandomStuff = [100, "don't", 200, "do", 300, "this"]</code></pre>
+
+    <p>
+      To read data from an array we use the square bracket syntax: <code>array[index]</code> to get a value out of an array at the given index.
+    </p>
+    
+    <pre><code>console.log("first element: " + anArrayWithNumbersInIt[0])
+console.log("second element: " + anArrayWithNumbersInIt[1])
+console.log("third element: " + anArrayWithNumbersInIt[2])
+console.log("101st element: " + anArrayWithNumbersInIt[100]) // what happens?</code></pre>
+
+    <p>
+      To write data to an array, we use the same syntax but include the <code>=</code> assignment operator we learned earlier.
+    </p>
+    
+    <pre><code>anArrayWithNumbersInIt[0] = -1
+anArrayWithNumbersInIt[1] = -2
+anArrayWithNumbersInIt[2] = -3
+anArrayWithNumbersInIt[100] = -101 // What happens?</code></pre>
+
    
   </div>
 
