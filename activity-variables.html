@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>AC Workshop - Activity: Variables</title>
+  
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+</head>
+<body>
+<div class="container">
+<div class="container-inner">
+
+  <div class="left-sidebar">
+    TODO: put content here (will copy paste from index when finished)
+  </div>
+
+  <div class="content">
+    <h1>Activity: Variables</h1>
+    
+    <p>
+      Go to <a href="jsbin.com">JSBin</a> and turn on the JavaScript and Console tabs (and turn off all the other tabs). In the JavaScript tab put your code, and in the Console tab click "Run" to execute your code and see the output.
+    </p>
+    <p>
+      Let's create:
+    </p>
+    <ul>
+      <li>A variable called `helloWrold`</li>
+      <li>A variable called `hiMyNameIs`</li>
+      <li>A variable called `this_is_snake_cased`</li>
+      <li>A variable called `thisVarHasNumbers111`</li>
+      <li>A variable called `this-var-has-dashes`</li>
+      <li>A variable containing letters, numbers, dashes, and underscores</li>
+      <li>Let's try to break JavaScript: make some variables that error out!</li>
+    </ul>
+
+    <p>
+      Use <code>console.log(myVariable)</code> to print out each variable to the console. You can also prepend it with a string and use the <code>+</code> operator to squish them together (the fancy name for that is to <b>concatenate</b> or <b>join</b> them together).
+    </p>
+    
+    <pre><code>console.log("The value of [something] is " + someVariable)</code></pre>
+    
+    <p>
+      <b>NOTE:</b> If the value of the variable is NOT a String and you try and concatenate it with a string, JavaScript will do a nice thing and convert it to a String for you. <i>However this can be dangerous</i>, JavaScript is not very smart and might convert it incorrectly. This might not be an issue for simple examples, but consider yourself warned!
+    </p>
+    
+    <p>
+      Now create a variable containing for each of the following:
+    </p>
+    <ul>
+      <li>Your name</li>
+      <li>Your age</li>
+      <li>Your favorite food</li>
+      <li>Your favorite film, book, or tv show (or one for each!)</li>
+    </ul>
+    
+    <p>
+      You can do math on variables too as long as they are numbers! Let's find out your birth year by subtracting your age (let's use the variable you defined in the last step) from the current year:
+    </p>
+    
+    <pre><code>var currentYear = 2016
+var myBirthYear = currentYear - myAge
+console.log("My birth year is " + myBirthYear)</code></pre>
+    
+    
+    <p>
+      It can get quite a bit more complicated:
+    </p>
+    
+    <pre><code>var companyRevenue = 1000000
+var officeRent = 250000
+var employeeSalary = 75000
+var numberOfEmployees = 4
+var taxRate = 0.4
+var profit = (companyRevenue - officeRent - employeeSalary * numberOfEmployees) * taxRate
+console.log("Profit this year was " + profit)</code></pre>
+   
+   <p>
+     Try changing the values like the rent, or the number of employees, and see how profit changes. This is why programming is so powerful!
+   </p>
+   
+  </div>
+
+</div>
+</div>
+</body>
+</html>
