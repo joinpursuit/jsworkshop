@@ -27,6 +27,10 @@
     </p>
     
     <img src="http://www.introprogramming.info/wp-content/uploads/2013/07/clip_image00213_thumb.png">
+    <div class="image-label">
+      Taken from 
+      <a href="http://www.introprogramming.info/">http://www.introprogramming.info/</a>
+    </div>
     
     <p>
       Remember how variables were like labeled boxes? Imagine if we lined up a bunch of boxes next to each other, and now we can use how far they are from the "first" box (let's assume the first box is the one on the far left) as their label. An array is a <b>numbered list of variables</b>.
@@ -34,8 +38,14 @@
     
     <pre><code>var myFirstArray = []
 var anArrayWithNumbersInIt = [1, 1, 2, 3, 5, 8, 13, 21]
-var anArrayWithStringsInIt = ["pizza", "burgers", "pho", "bao", "curry", ]
-var anArrayWithRandomStuff = [100, "don't", 200, "do", 300, "this"]</code></pre>
+var anArrayWithStringsInIt = ["pizza", "bagel", "pho", "bao", "curry"]
+var anArrayWithRandomStuff = ["generally", 100, "don't", 200, "do", 300, "this"]</code></pre>
+
+    <p>
+      You can use <code>console.log(myArray)</code> to inspect the contents of an array.
+      Don't be afraid to log anything and everything to better understand what's going on
+      in your code.
+    </p>
 
     <p>
       To read data from an array we use the square bracket syntax: <code>array[index]</code> to get a value out of an array at the given index.
@@ -44,7 +54,7 @@ var anArrayWithRandomStuff = [100, "don't", 200, "do", 300, "this"]</code></pre>
     <pre><code>console.log("first element: " + anArrayWithNumbersInIt[0])
 console.log("second element: " + anArrayWithNumbersInIt[1])
 console.log("third element: " + anArrayWithNumbersInIt[2])
-console.log("101st element: " + anArrayWithNumbersInIt[100]) // what happens?</code></pre>
+console.log("21st element: " + anArrayWithNumbersInIt[20]) // what happens?</code></pre>
 
     <p>
       To write data to an array, we use the same syntax but include the <code>=</code> assignment operator we learned earlier.
@@ -53,7 +63,24 @@ console.log("101st element: " + anArrayWithNumbersInIt[100]) // what happens?</c
     <pre><code>anArrayWithNumbersInIt[0] = -1
 anArrayWithNumbersInIt[1] = -2
 anArrayWithNumbersInIt[2] = -3
-anArrayWithNumbersInIt[100] = -101 // What happens?</code></pre>
+anArrayWithNumbersInIt[20] = -21 // What happens?</code></pre>
+
+    <p>
+      It's good to understand what happens in weird cases like the last line above, however you should almost <b>never</b> do that, and when you do it is often a bug.
+    </p>
+    
+    <p>
+      Arrays have methods and properties. These are accessed via the <code>.</code> operator. The <code>.</code> operator is used on all JavaScript objects to interact and get data out of the object. We will learn more about JavaScript objects in the Access Code program, for this workshop the only objects we will discuss are Arrays and Functions. The difference between a method and a property: a method is <b>code</b> while a property is a <b>value</b> like other variables we've discussed so far.
+    </p>
+    
+    <pre><code>var fruits = ["Banana", "Orange", "Apple", "Mango"]
+console.log("The length of fruits is " + fruits.length)  // 4
+fruits.push("Papaya")
+console.log("The length of fruits is " + fruits.length)  // 5</code></pre>
+
+    <p>
+      You can find a great tutorial (including some advanced topics about Objects that we won't cover in this workshop) <a href="http://www.w3schools.com/js/js_arrays.asp">here at w3schools</a>. The <a href="http://www.w3schools.com/jsref/jsref_obj_array.asp">array reference documentation at w3schools</a> is extremely helpful as well. Go there to look up the different methods and properties on arrays. Note the only useful property is <code>length</code>, but it's a very important one!
+    </p>
 
    
   </div>
