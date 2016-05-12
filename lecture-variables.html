@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>AC Workshop - Lecture: Variables</title>
+  
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+</head>
+<body>
+<div class="container">
+<div class="container-inner">
+
+  <div class="left-sidebar">
+    TODO: put content here (will copy paste from index when finished)
+  </div>
+
+  <div class="content">
+    <h1>Lecture: Variables</h1>
+    
+    <h2>What is a Variable?</h2>
+    
+    <p>
+      A good analogy is a <b>labeled box</b>. Outside is the label, inside is something, and it could be anything!
+    </p>
+    <img width="500px" src="http://2.bp.blogspot.com/-guGunS9ljms/Ui-sF7Q9yQI/AAAAAAAAACU/DdnRgAARYyI/s1600/box.png"/>
+    <div class="image-label">(Stolen from Khan Academy)</div>
+    
+    <p>
+      Officially:
+      A variable is a <b>container</b>. It has both a <b>name</b> and a <b>value</b>. You
+      declare a new variable with the <code>var</code> keyword, and <b>assign</b> it 
+      (aka give it) a value with the <code>=</code> sign.
+    </p>
+    <pre><code>var variableOne = 1
+var variableTwo = "Two"
+var bensFavLanguage = "JavaScript"
+console.log("Ben's favorite language is: " + bensFavLanguage)</code></pre>
+
+    <p>
+      In JavaScript the <b>value</b> of a variable can change, but the name cannot.
+      However, you can assign variables with values from other variables.
+    </p>
+    
+    <pre><code>var bensFavLanguage = "JavaScript"
+var studentsFavLanguage = "French"
+console.log("Student's favorite language was " + studentsFavLanguage)
+// It was French!
+
+// .... after this lecture ....
+studentsFavLanguage = bensFavLanguage
+console.log("Student's favorite language was " + studentsFavLanguage)
+// Now it's JavaScript!</code></pre>
+   
+   <p>
+     Other fun facts and features of variables:
+     <ul>
+       <li>Variables can be used and reused as many times as you want</li>
+       <li>Variables can hold different kinds of data (Integers, Strings, and more!)</li>
+       <li>The name of a variable is very important for you and others reading your code.</li>
+       <li>The name of a variable can contain letters, numbers, underscores, or dashes. However it cannot START with a number or a dash (but it can start with an underscore).
+     </ul>
+   </p> 
+   
+  </div>
+
+</div>
+</div>
+</body>
+</html>
