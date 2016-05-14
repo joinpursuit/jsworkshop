@@ -30,6 +30,62 @@
 } else {
   console.log("The condition was false")
 }</code></pre>
+
+    <p>
+      You read it like you would english: "If someConditionIsTrue, execute the code in the subsequent block. Else if it's not true execute the code in the else block."
+    </p>
+    
+    <p>
+      Else blocks are not required, it's ok to have an if statement without an else block.
+    </p>
+    <pre><code>if (someConditionIsTrue) {
+  console.log("The condition was true")
+}
+console.log("This code will ALWAYS run regardless of whether the condition is true or false")</code></pre>
+
+    <p>
+      So what is the "condition" though? It's actually a new type called a <code>boolean</code>. A <code>boolean</code> can have only TWO possible values: <code>true</code> or <code>false</code>. Most of the time booleans are built out of equality and inequality statements. Let's look at some examples:
+    </p>
+
+    <pre><code>var someBoolean = true
+var aDifferentBoolean = false
+var isZeroEqualToZero = 0 == 0
+var isZeroEqualToOne = 0 == 1
+var isZeroGreaterThanZero = 0 > 0
+var isZeroLessThanOne = 0 < 1
+// Try logging these different values to the console.
+// You should know which ones are true and which ones are false!
+console.log(isZeroLessThanOne)</code></pre>
+    
+    <p>
+      Ok let's combine the boolean type with the <code>if</code> statement to see some real code!
+    </p>
+
+    <pre><code>var userName = "Benno"
+
+if (userName == "Benno") {
+  console.log("Welcome Benno!")
+} else {
+  console.log("Hi Guest. Have you seen Benno?")
+}</code></pre>
+
+    <p>
+      An important strategy is to chain <code>if/else</code> statements. This allows you to conditionally evaluate the <code>else</code> block on whatever condition you want. Let's look at an example:
+    </p>
+
+    <pre><code>var userAge = 29
+
+if (userAge > 21) {
+  console.log("Let's party tonight")
+} else if (userAge > 18) {
+  console.log("Let's party responsibly tonight")
+} else if (userAge > 13) {
+  console.log("Let's have a LAN party tonight")
+} else {
+  console.log("Time for bed, isn't it past your bedtime?")
+}</code></pre>
+
+
     
   </div>
 
