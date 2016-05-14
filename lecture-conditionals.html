@@ -73,15 +73,19 @@ if (userName == "Benno") {
       An important strategy is to chain <code>if/else</code> statements. This allows you to conditionally evaluate the <code>else</code> block on whatever condition you want. Let's look at an example:
     </p>
 
-    <pre><code>var userAge = 29
+    <pre><code class="javascript">var userAge = 29
 
-if (userAge > 21) {
+if (userAge >= 21) {
+  // userAge is 21 or higher
   console.log("Let's party tonight")
-} else if (userAge > 18) {
+} else if (userAge >= 18) {
+  // userAge is 18 or higher but less than 21
   console.log("Let's party responsibly tonight")
-} else if (userAge > 13) {
+} else if (userAge >= 13) {
+  // userAge is 13 or higher but less than 18
   console.log("Let's have a LAN party tonight")
 } else {
+  // userAge is less than 13
   console.log("Time for bed, isn't it past your bedtime?")
 }</code></pre>
 
