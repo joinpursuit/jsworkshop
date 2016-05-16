@@ -20,6 +20,8 @@ body {
   overflow: auto;
   max-width: 250px;
   background-color: #6EC900;
+}
+.left-sidebar > div {
   padding:15px;
 }
 .content {
@@ -30,6 +32,29 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+.home-anchor {
+  width: 100%;
+  background-color:#555554;
+  color:white;
+}
+
+.home-anchor a:link {
+  color:white;
+  text-decoration: none;
+}
+.home-anchor a:link {
+    color: white;
+}
+.home-anchor a:visited {
+    color: white;
+}
+.home-anchor a:hover {
+    color: white;
+}
+.home-anchor a:active {
+    color: white;
+}
+
 .completed {
   text-decoration: line-through;
 }
