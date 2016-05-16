@@ -66,7 +66,7 @@ result = square(square(2))</code></pre>
       The fact that we can chain functions is not a special feature of functions. Instead it's a peek into how "evaluation of expressions" work. In <code>square(square(2))</code> The argument to the outer call to square is the result of the evaluation of <code>square(2)</code> which is just <code>4</code>.
     </p>
 
-    <h2>Let's Practice</h2>
+    <h2>Let's See it in action</h2>
     <p>
       Let's try migrating a couple of our interesting challenges from the last set of exercises into functions. We'll do the first one together:
     </p>
@@ -80,13 +80,22 @@ result = square(square(2))</code></pre>
       largestElement = inputArray[i]
     }
   }
-  // ... and we can now return the result! Very neat!
+  // ... and we can now return the result. Very neat!
   return largestElement
 }
 
 // Now we can re-use this function for any input we want!
-var result = findLargestElement([1,2,99,100,55,32,])
+var result = findLargestElement([1,2,99,100,55,32,80])
 </code></pre>
+
+    <h2>Now migrate the rest on your own</h2>
+
+    <ul>
+      <li>Build a simple array</li>
+      <li>Build a slightly more complicated array (double the index, odd/even indices)</li>
+      <li>Range of numbers <i>Note: this one takes TWO argument</i></li>
+      <li>Average value within an array</li>
+    </ul>
 
   </div>
 
