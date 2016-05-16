@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title>AC Workshop - Lecture: Conditionals</title>
+  
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+</head>
+<body>
+<div class="container">
+<div class="container-inner">
+
+  <div class="left-sidebar">
+    <div class="home-anchor">
+      <h3><a href="index.html">Intro to Programming with JavaScript</a></h3>
+    </div>
+    TODO: put content here (will copy paste from index when finished)
+  </div>
+
+  <div class="content">
+    <h1>Lecture: Conditionals</h1>
+    
+    <p>
+      So far we've only made the computer do pretty simple stuff, and no matter what it always did the SAME stuff. But how does the computer handle different situations? Let's learn the <code>if</code> statement:
+    </p>
+
+    <pre><code>if (someConditionIsTrue) {
+  console.log("The condition was true")
+} else {
+  console.log("The condition was false")
+}</code></pre>
+
+    <p>
+      You read it like you would english: "If someConditionIsTrue, execute the code in the subsequent block. Else if it's not true execute the code in the else block."
+    </p>
+    
+    <p>
+      Else blocks are not required, it's ok to have an if statement without an else block.
+    </p>
+    <pre><code>if (someConditionIsTrue) {
+  console.log("The condition was true")
+}
+console.log("This code will ALWAYS run regardless of whether the condition is true or false")</code></pre>
+
+    <p>
+      So what is the "condition" though? It's actually a new type called a <code>boolean</code>. A <code>boolean</code> can have only TWO possible values: <code>true</code> or <code>false</code>. Most of the time booleans are built out of equality and inequality statements. Let's look at some examples:
+    </p>
+
+    <pre><code>var someBoolean = true
+var aDifferentBoolean = false
+var isZeroEqualToZero = 0 == 0
+var isZeroEqualToOne = 0 == 1
+var isZeroGreaterThanZero = 0 > 0
+var isZeroLessThanOne = 0 < 1
+// Try logging these different values to the console.
+// You should know which ones are true and which ones are false!
+console.log(isZeroLessThanOne)</code></pre>
+    
+    <p>
+      Ok let's combine the boolean type with the <code>if</code> statement to see some real code!
+    </p>
+
+    <pre><code>var userName = "Benno"
+
+if (userName == "Benno") {
+  console.log("Welcome Benno!")
+} else {
+  console.log("Hi Guest. Have you seen Benno?")
+}</code></pre>
+
+    <p>
+      An important strategy is to chain <code>if/else</code> statements. This allows you to conditionally evaluate the <code>else</code> block on whatever condition you want. Let's look at an example:
+    </p>
+
+    <pre><code class="javascript">var userAge = 29
+
+if (userAge >= 21) {
+  // userAge is 21 or higher
+  console.log("Let's party tonight")
+} else if (userAge >= 18) {
+  // userAge is 18 or higher but less than 21
+  console.log("Let's party responsibly tonight")
+} else if (userAge >= 13) {
+  // userAge is 13 or higher but less than 18
+  console.log("Let's have a LAN party tonight")
+} else {
+  // userAge is less than 13
+  console.log("Time for bed, isn't it past your bedtime?")
+}</code></pre>
+
+    <p>
+      Another important tool are the <b>boolean operators</b> <code>&&</code>, <code>||</code>, and <code>!</code> which are <b>AND</b>, <b>OR</b>, and <b>NOT</b> respectively. <a href="http://www.columbia.edu/cu/lweb/help/clio/boolean_operators.html">Here is a nice guide</a> to visualize these operators.
+    </p>
+
+    <pre><code>if (userAge >= 25 && userAge < 70) {
+  console.log("Perfect age to rent a car")
+}
+if (userAge == 18 || userAge == 21) {
+  console.log("Congrats on the big milestone year!")
+}</code></pre>
+
+    
+  </div>
+
+</div>
+</div>
+</body>
+</html>

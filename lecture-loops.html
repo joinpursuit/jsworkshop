@@ -15,12 +15,94 @@
 <div class="container-inner">
 
   <div class="left-sidebar">
+    <div class="home-anchor">
+      <h3><a href="index.html">Intro to Programming with JavaScript</a></h3>
+    </div>
     TODO: put content here (will copy paste from index when finished)
   </div>
 
   <div class="content">
     <h1>Lecture: Loops</h1>
     
+    <p>
+      Imagine if we wanted to print out ALL the elements of an array. Or the even numbers between 0 and 100. Or even just repeat the same thing - like "text my mom something nice" or "text my ex something mean" - 100 times?
+    </p>
+
+    <pre><code>console.log(1)
+console.log(2)
+console.log(3)
+console.log(4)
+console.log(5)
+console.log(6)
+console.log(7)
+console.log(8)
+console.log(9)
+console.log(10)
+console.log(11)
+console.log(12)
+console.log(13)
+console.log(14)
+console.log(15)</code></pre>
+
+    <p>
+      That looks pretty tedious! What if we wanted to up to 100, or 1,000, or 1,000,000?!
+    </p>
+
+    <p>
+      Computers are not very smart, but they are <i>very</i> good at doing repetetive tasks. How? They use <b>loops</b>!
+    </p>
+
+<pre><code>for (var i = 0; i < 100; i++) {
+  console.log(i)
+}</code></pre>
+    
+    <p>
+      So what's going on here? Let's break it down:
+    </p>
+
+    <p>
+      The loop has four major sections:
+      <ol>
+        <li>Initialization: <code>var i = 0</code></li>
+        <li>Condition: <code>i < 100</code></li>
+        <li>Increment: <code>i++</code></li>
+        <li>Body: <code>console.log(i)</code></li>
+      </ol>
+
+      These are all just examples, you can put anything you want in any of the four sections (including nothing at all!), but the vast majority of the time all four sections have something in them.
+    </p>
+
+    <h2>Initialization</h2>
+    <p>
+      The <b>initialization</b> is where you set up the variables that you need for your loop. The most common is <code>var i = 0;</code> but you can start at anything, for example: <code>1</code> or <code>1000000</code>, depending on what your program is doing.
+    </p>
+    <p>
+      <b>Challenge Question:</b> What would the initialization be if we wanted to start our index at the END of an array and work backwards?
+    </p>
+
+    <h2>Condition</h2>
+    <p>
+      The loop will execute the <b>body</b> repeatedly until the <b>condition</b> evaluates to <code>false</code>. Each execution of the body is called an <b>iteration</b>.
+    </p>
+    <p>
+      <b>Challenge Question:</b> What would the condition be if we wanted to start our index at the END of an array and work backwards? What about if we started at the BEGINNING of an array and work forwards to the end?
+    </p>
+
+    <h2>Increment</h2>
+    <p>
+      The <b>increment</b> is where you update the variables at the end of each iteration. The most common is <code>i++</code> but you can do anything, for example: <code>i += 2</code> or <code>i *= 2</code>, depending on what your program is doing.
+    </p>
+    <p>
+      <b>Challenge Question:</b> What would the increment be if we wanted to start our index at the END of an array and work backwards?
+    </p>
+
+    <h2>Body</h2>
+    <p>
+      The <b>body</b> is the meat of your loop. The rest is just figuring out where you start, where you end, and what the step size is. The body gets executed over and over again until the condition evaluates to <code>false</code>.
+    </p>
+    <p>
+      <b>Challenge Question:</b> Now that we have all the pieces, write a program that iterates through an array from the back to the front and prints out only the values at the odd indices.
+    </p>
     
   </div>
 
