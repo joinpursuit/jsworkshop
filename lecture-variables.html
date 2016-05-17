@@ -56,15 +56,56 @@ studentsFavLanguage = bensFavLanguage
 console.log("Student's favorite language was " + studentsFavLanguage)
 // Now it's JavaScript!</code></pre>
    
-   <p>
-     As usual, the <a href="http://www.w3schools.com/js/js_variables.asp">w3schools page on variables</a> is a fantastic resource worth reading and visiting often. Here are some other fun facts and features of variables:
-     <ul>
-       <li>Variables can be used and reused as many times as you want</li>
-       <li>Variables can hold different kinds or <b>types</b> of data (Numbers, Strings, and more!)</li>
-       <li>The name of a variable is very important for you and others reading your code.</li>
-       <li>The name of a variable can contain letters, numbers, underscores, and dollar signs. However it <i>cannot start with a number</i>.
-     </ul>
-   </p> 
+    <p>
+      As usual, the <a href="http://www.w3schools.com/js/js_variables.asp">w3schools page on variables</a> is a fantastic resource worth reading and visiting often. Here are some other fun facts and features of variables:
+      <ul>
+        <li>Variables can be used and reused as many times as you want</li>
+        <li>Variables can hold different kinds or <b>types</b> of data (Numbers, Strings, and more!)</li>
+        <li>The name of a variable is very important for you and others reading your code.</li>
+        <li>The name of a variable can contain letters, numbers, underscores, and dollar signs. However it <i>cannot start with a number</i>.
+      </ul>
+    </p>
+
+
+    <h2>Evaluation / Execution of code</h2>
+    <p>
+      The word we use to describe turning a set of code into a single value is called <b>evaluate</b> or <b>execute</b>. This is useful to think about in situations where we assign the result of some math to a variable:
+    </p>
+    <pre><code>var x = 10
+var y = 20
+var someVariable = (100 * x / y) - x*y
+x = 0
+y = 0
+console.log(someVariable)</code></pre>
+    <p>
+      The value of some variable is decided at the moment of assignment when that line of code gets <b>executed</b> and the <b>expression</b> on the right side of the assignment gets <b>evaluated</b>.
+    </p>
+
+    <h2>Useful and important syntax</h2>    
+    <pre><code>var someNumber = 0
+
+//Increment: take a value and increase it by 1
+someNumber = someNumber + 1
+someNumber += 1 // This and the above line can be any number
+someNumber++
+++someNumber
+
+//Decrement: take a value and decrease it by 1
+someNumber = someNumber - 1
+someNumber -= 1 // This and the above line can be any number
+someNumber--
+--someNumber
+
+//Multiply: take a value and multiply it by x
+someNumber = someNumber * x
+someNumber *= x
+
+//Divide: take a value and divide it by x
+someNumber = someNumber / x
+someNumber /= x
+</code></pre>
+
+
    
   </div>
 

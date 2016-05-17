@@ -24,10 +24,44 @@ body {
 .left-sidebar > div {
   padding:15px;
 }
+.navigation-links {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.navigation-link-item {
+  position: relative;
+  padding: 5px 15px;
+}
+.navigation-link-item:before {
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right,rgba(255,255,255,.03) 0,rgba(255,255,255,1.1) 50%,rgba(255,255,255,.03) 100%);
+}
+.navigation-link-item a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease-in-out;
+
+}
+.navigation-link-item a:visited {
+  color: white;
+  
+}
+.navigation-link-item a:hover {
+  color: black;
+  
+}
 .content {
-  width:80%;
+  width:100%;
   overflow: auto;
   padding:40px;
+
+}
+.content > * { 
   max-width: 1024px;
   margin-left: auto;
   margin-right: auto;
