@@ -61,7 +61,48 @@
 // Input: 17
 // Output: [17, 34, 51, 68, 85, 102, 119, 136, 153, 170, 187, 204, 221, 238, 255, 272, 289, 306, 323, 340]</code></pre>
 
-    
+    <p>
+      <b>Bonus:</b> How would you change this function to return a list of the first 10 powers of that number? <i>Hint:</i> Check out the <a href="http://www.w3schools.com/jsref/jsref_pow.asp">JavaScript <code>pow()</code> Method</a>.
+    </p>
+
+
+    <h2>What does this function do?</h2>
+
+    <p>
+      Please do <b>NOT</b> put this into CodePen, I do <b>NOT</b> want to actually run it until you figure it out! Trust me, you'll appreciate the practice. Instead test yourself by stepping through it line by line yourself. I suggest taking out a pen(cil) and paper or using sublime as a notepad to keep track of variable values as you go line by line
+    </p>
+
+    <pre><code>var MysteryFunction = function(input1, input2) {
+  return MysteryFunction2(input1) + MysteryFunction2(input2)
+}
+
+var MysteryFunction2 = function(input) {
+  if (input > 10) {
+    return 10
+  } else {
+    return input + 10
+  }
+}
+
+// What does it log?
+console.log(MysteryFunction(15, 7))</code></pre>
+
+
+    <h2>Let's try a bit trickier one</h2>
+
+    <pre><code>var MysteryFunction = function(input) {
+  if (MysteryFunction2(input % 5) > 10) {
+    return MysteryFunction2(input % 3)
+  }
+  return MysteryFunction2(input % 4)
+}
+
+var MysteryFunction2 = function(input) {
+  return input * 3
+}
+
+// What does it log?
+console.log(MysteryFunction(23))</code></pre>
 
     
   </div>

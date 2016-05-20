@@ -51,7 +51,7 @@ myFirstFunction(10, 100)</code></pre>
       <li><b>Function signature</b>: The function name and parameters combined are what is called a "function signature"</li>
     </ul>
 
-    <pre><code>var square(inputInt) {
+    <pre><code>var square = function(inputInt) {
   return inputInt * inputInt
 }
 
@@ -65,6 +65,17 @@ result = square(square(2))</code></pre>
     <p>
       The fact that we can chain functions is not a special feature of functions. Instead it's a peek into how "evaluation of expressions" work. In <code>square(square(2))</code> The argument to the outer call to square is the result of the evaluation of <code>square(2)</code> which is just <code>4</code>.
     </p>
+
+    <h2>Functions can call other functions</h2>
+
+    <p>
+      One very powerful tool of functions is the ability to call other functions. You can chain them, run them inside loops or conditionals, really anything you can imagine!
+    </p>
+
+    <pre><code>var sumOfSquares = function(x, y) {
+  return square(x) + square(y)
+}
+</code></pre>
 
     <h2>Let's See it in action</h2>
     <p>
