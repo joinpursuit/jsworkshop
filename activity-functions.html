@@ -104,6 +104,27 @@ var MysteryFunction2 = function(input) {
 // What does it log?
 console.log(MysteryFunction(23))</code></pre>
 
+
+    <h2>Here's one with loops</h2>
+
+    <pre><code>var MysteryFunction = function(input) {
+  if (input.length > 4) {
+    return MysteryFunction2(input, 3)
+  }
+  return MysteryFunction2(input, 2)
+}
+
+var MysteryFunction2 = function(input1, input2) {
+  for (i = input2; i >= 0; i--) {
+    input1.push(i)
+  }
+  return input1
+}
+
+// What does it log?
+console.log(MysteryFunction([4,5,6]))
+// What about this call?
+console.log(MysteryFunction([10,9,8,7,6])</code></pre>
     
   </div>
 
