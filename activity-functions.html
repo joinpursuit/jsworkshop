@@ -18,13 +18,127 @@
     <div class="home-anchor">
       <h3><a href="index.html">Intro to Programming with JavaScript</a></h3>
     </div>
-    TODO: put content here (will copy paste from index when finished)
+    <div class="navigation-links">
+      <div class="navigation-link-item"><a href="activity-logging.html">Activity: Logging</a></div>
+      <div class="navigation-link-item"><a href="lecture-variables.html">Lecture: Variables</a></div>
+      <div class="navigation-link-item"><a href="activity-variables.html">Activity: Variables</a></div>
+      <div class="navigation-link-item"><a href="lecture-arrays.html">Lecture: Arrays</a></div>
+      <div class="navigation-link-item"><a href="activity-arrays.html">Activity: Arrays</a></div>
+      <div class="navigation-link-item"><a href="lecture-conditionals.html">Lecture: Conditionals</a></div>
+      <div class="navigation-link-item"><a href="activity-conditionals.html">Activity: Conditionals</a></div>
+      <div class="navigation-link-item"><a href="lecture-loops.html">Lecture: Loops</a></div>
+      <div class="navigation-link-item"><a href="activity-fizzbuzz.html">Activity: Fizz Buzz</a></div>
+      <div class="navigation-link-item"><a href="activity-arraysadvanced.html">Activity: Arrays (Advanced)</a></div>
+      <div class="navigation-link-item"><a href="lecture-functions.html">Lecture: Functions</a></div>
+      <div class="navigation-link-item"><a href="activity-functions.html">Activity: Functions</a></div>
+      <div class="navigation-link-item"><a href="practiceproblems.html">Practice Problems</a></div>
+    </div>
   </div>
 
   <div class="content">
     <h1>Activity: Functions</h1>
     
-    
+    <h2>What's wrong with this code? List out every problem:</h2>
+
+    <pre><code>var 3TimesArgument = func(argument) {
+  arg * 3 return
+}</code></pre>
+
+    <h2>Finish this function:</h2>
+
+    <p>
+      I set up the conditional part of the following function. It works because if the square-root of a number rounded down is the same then it's a whole number, and thus the input number is a perfect square.
+    </p>
+
+    <pre><code>var isPerfectSquare = function(arg) {
+  // Some code belongs here.
+  // Hint: what variable needs to be created and assigned?
+  if(Math.floor(sqrtOfArg) == sqrtOfArg) {
+    // It's a perfect square!
+  } else {
+    // It's not
+  }
+}</code></pre>
+
+    <p>
+      Fill out the function such that it can be used anywhere to determine if a number is a perfect square or not. Test it by running it many times with both numbers that are and aren't perfect squares.
+    </p>
+
+    <h2>Multiples of numbers</h2>
+
+    <p>
+      Write a function that takes as input a number, and returns a list of the first 20 multiples of that number.
+    </p>
+
+    <pre><code>// Input: 4
+// Output: [4, 8, 12, 16, 20, 24, 28, 32, 36, 40, 44, 48, 52, 56, 60, 64, 68, 72, 76, 80]
+// Input: 17
+// Output: [17, 34, 51, 68, 85, 102, 119, 136, 153, 170, 187, 204, 221, 238, 255, 272, 289, 306, 323, 340]</code></pre>
+
+    <p>
+      <b>Bonus:</b> How would you change this function to return a list of the first 10 powers of that number? <i>Hint:</i> Check out the <a href="http://www.w3schools.com/jsref/jsref_pow.asp">JavaScript <code>pow()</code> Method</a>.
+    </p>
+
+
+    <h2>What does this function do?</h2>
+
+    <p>
+      Please do <b>NOT</b> put this into CodePen, I do <b>NOT</b> want to actually run it until you figure it out! Trust me, you'll appreciate the practice. Instead test yourself by stepping through it line by line yourself. I suggest taking out a pen(cil) and paper or using sublime as a notepad to keep track of variable values as you go line by line
+    </p>
+
+    <pre><code>var MysteryFunction = function(input1, input2) {
+  return MysteryFunction2(input1) + MysteryFunction2(input2)
+}
+
+var MysteryFunction2 = function(input) {
+  if (input > 10) {
+    return 10
+  } else {
+    return input + 10
+  }
+}
+
+// What does it log?
+console.log(MysteryFunction(15, 7))</code></pre>
+
+
+    <h2>Let's try a harder one</h2>
+
+    <pre><code>var MysteryFunction = function(input) {
+  if (MysteryFunction2(input % 5) > 10) {
+    return MysteryFunction2(input % 3)
+  }
+  return MysteryFunction2(input % 4)
+}
+
+var MysteryFunction2 = function(input) {
+  return input * 3
+}
+
+// What does it log?
+console.log(MysteryFunction(23))</code></pre>
+
+
+    <h2>Here's one with loops</h2>
+
+    <pre><code>var MysteryFunction = function(input) {
+  if (input.length > 4) {
+    return MysteryFunction2(input, 3)
+  }
+  return MysteryFunction2(input, 2)
+}
+
+var MysteryFunction2 = function(input1, input2) {
+  for (i = input2; i >= 0; i--) {
+    input1.push(i)
+  }
+  return input1
+}
+
+// What does it log?
+console.log(MysteryFunction([4,5,6]))
+// What about this call?
+console.log(MysteryFunction([10,9,8,7,6])</code></pre>
     
   </div>
 
