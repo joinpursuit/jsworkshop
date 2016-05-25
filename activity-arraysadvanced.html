@@ -39,7 +39,7 @@
     <h1>Activity: Arrays (Advanced)</h1>
 
     <p>
-      <b>Note</b>: <i>Keep</i> and don't delete these programs you write in this activity, we will re-use them in future lessons!
+      <b>Note</b>: <i>Keep</i> and don't delete these programs you write in this activity, we will re-use them in future lessons! One thing you can do (if you haven't done so already) is create a codepen account, login, and save your work as you complete the following problems.
     </p>
 
     <h2>Find min &amp; max within an array</h2>
@@ -47,19 +47,30 @@
       Given an array, write a program that returns the <b>largest</b> element. Then try the <b>smallest</b> element. <i>Hint: this will require variables, loops, and conditionals!</i>
     </p>
 
+    <pre><code>var arr = [25, 101, 66, 10, 99]
+// for the array above, expect:
+// largest element => 101
+// smallest element => 10
+</code></pre>
+
     <h2>Detect if an element is within an array</h2>
     <p>
       Given an array and a target value, write a program that returns whether or not the target value exists within the array. <i>Hint: what type will the result value be? What should its default value be?</i>
     </p>
 
-    <pre><code>var arr = [10, 25, 66, 99, 101]
-var target = 66 // Result should "true"
-var target = 77 // Result should be "false"</code></pre>
+    <pre><code>var result; // what should this be set to by default?
+var arr = [10, 25, 66, 99, 101]
+var target = 66 // result should "true"
+var target = 77 // result should be "false"</code></pre>
 
     <h2>Build a simple array</h2>
     <p>
       Given an integer size, write a program that builds an array of that size where each element is its own index.
     </p>
+
+    <pre><code>var integerSize = 10;
+// expect array to be: [0,1,2,3,4,5,6,7,8,9]
+</code></pre>
     <ul>
       <li>Try with each element value being double its own index? Or triple?</li>
       <li>What about if all the odd indices are double while all the even indices are quadruple?</li>
