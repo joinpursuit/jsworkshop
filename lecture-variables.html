@@ -76,10 +76,19 @@ console.log("Student's favorite language was " + studentsFavLanguage)
         <li>Variables can be used and reused as many times as you want</li>
         <li>Variables can hold different kinds or <b>types</b> of data (Numbers, Strings, and more!)</li>
         <li>The name of a variable is very important for you and others reading your code.</li>
-        <li>The name of a variable can contain letters, numbers, underscores, and dollar signs. However it <i>cannot start with a number</i>.
+        <li>The name of a variable can contain letters, numbers, underscores, and dollar signs. However it <i>cannot start with a number</i>. Also, <b>spaces</b> and <b>dashes</b> are <b>not</b> allowed in a variable name &mdash; having these characters in your variable name will throw an error.
       </ul>
     </p>
 
+    <pre><code>// BAD variable names
+var 3.14isPi; // can't start with number, can't have periods
+var hello everyone!; // space and '!' not allowed
+var this-is-also-not-kosher; // has dashes, too long
+
+// BETTER variable names
+var pi; // all lower cased, simple and succinct 
+var helloEveryone; // 'camel cased': individual words are capitalized
+    </code></pre>
 
     <h2>Evaluation / Execution of code</h2>
     <p>
