@@ -132,9 +132,51 @@ someNumber *= x
 someNumber = someNumber / x
 someNumber /= x
 </code></pre>
-
+    <p>
 (Optional) <b>Challenge</b>: what is the value of <code>someNumber</code> at the end of the above code snippet? Walk through each line of code and try to compute the value of <code>someNumber</code> yourself. Then, paste the snippet above into codepen to check your answer.
-   
+    </p>
+
+    <h2>Variable Types</h2>
+    <p>
+        What's the difference between:
+    </p>     
+    <pre><code>var label = "Do Not Disturb";
+// and
+var distance = 100;</code></pre>
+    <p>
+        The short answer is this: the first, <code>var label</code> is a <b>string</b> whereas the second, <code> var distance</code> is a <b>number</b>. In javascript, variables may have different <b>types</b> and each type of variable is used to represent a specific group of data.
+    </p>
+    <h3>Numbers</h3>
+    <p>
+        <b>Numbers</b> are what you would expect them to be in the real world &mdash; numbers. Numbers can be used with the arithmetic (<code>+,-,*,/</code>) operators.
+    </p>
+    <pre><code>// Examples
+var radius = 5; 
+var g = 9.81; // decimals count as numbers
+var piAsFraction = 22 / 7; // this is computed and stored as 3.142857142857143
+</code></pre>
+    <h3>Strings</h3>
+    <p>
+        A <b>string</b> can be used to represent words and sentences. Anything wrapped in quotations (either double or single) will be represented as a <b>string</b> in javascript (even if the thing in quotes is a number).
+    </p> 
+    <p>
+        <b>Most</b> arithmetic operators (<code>-,*,/</code>) do not work with strings. The <code>+</code> operator can be used to "add" or <b>concatenate</b> strings together.
+    </p>
+    <p>
+        Let's see this in action.
+    </p>
+    <pre><code>
+var name = "John"; // double quotes, this is string
+var lastName = 'Smith'; // SINGLE quotes, still string
+var fullName = name + " " + lastName; // John Smith
+// notice how the '+' in this case combines three strings into one string
+
+var stillAString = "2"; // this is still a string since wrapped in quotes
+
+var invalid = "John Smith'; // NOTE: the quote TYPES mismatch, not kosher
+</code></pre>
+
+    <p><b>Question</b>: what would happen if you pasted the <code>var invalid = "John Smith';</code> into codepen? </p>
   </div>
 
 </div>
