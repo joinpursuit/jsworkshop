@@ -85,14 +85,26 @@ console.log("Student's favorite language was " + studentsFavLanguage)
     </p>
 
     <pre><code>// BAD variable names
-var 3.14isPi; // can't start with number, can't have periods
-var hello everyone!; // space and '!' not allowed
-var this-is-also-not-kosher-as-a-variable-name-for-use-later; // has dashes, OPINION: too long, concise names are better
+var 3.14isPi // can't start with number, can't have periods
+var hello everyone! // space and '!' not allowed
+var this-is-also-not-kosher-as-a-variable-name-for-use-later
+// has dashes, OPINION: too long, concise names are better
 
 // BETTER variable names
-var pi; // all lower cased, simple and succinct 
-var helloEveryone; // 'camel cased': individual words are capitalized
+var pi // all lower cased, simple and succinct 
+var helloEveryone // 'camel cased': individual words are capitalized
+var listOfAllUniqueNames // describes the type of data inside: a list
+var orderedListOfPrimeNumbers // describes the type and the organization: a sorted list
     </code></pre>
+
+    <h2>Good Variable Names</h2>
+
+    <p>
+      Having good variable names is super important. You want the casing to be consistent across all the files in your project, and ideally consistent with the standards of the language. I like <a href="https://github.com/feross/standard">JavaScript Standard Style</a> but not everyone has the same style. The most popular casing for variables in JavaScript is called "Camel Cased" which starts with a lower case letter and only capitalizes the first letter of each internal word. Examples: <code>myNumber</code>, <code>sortedPrimeNumbers</code>, <code>listOfBestPizzaInNyc</code>.
+    </p>
+    <p>
+      You want your names to be as concise and as clear as possible. Being able to reason about what data is in a variable in the middle of a big and complicated program is important both for yourself and for when you share code. <b>You will read more code than you will write as a programmer</b>.
+    </p>
 
     <h2>Evaluation / Execution of code</h2>
     <p>
