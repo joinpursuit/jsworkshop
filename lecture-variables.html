@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-
+  
   <title>AC Workshop - Lecture: Variables</title>
   
   <link rel="stylesheet" type="text/css" href="styles.css">
@@ -71,19 +71,118 @@ console.log("Student's favorite language was " + studentsFavLanguage)
 // Student's favorite language was JavaScript</code></pre>
 
     <p>
-      Notice how in the code snippet above our second <code>console.log</code> statement is identical to the first <code>console.log</code> statement but the output is drastically different since the value of the var <code>studentsFavLanguage</code> has changed.
+      Notice how in the code snippet above our second <code>console.log</code> statement is identical to the first <code>console.log</code> statement but the output is drastically different since the value of the var <code>studentsFavLanguage</code> has changed. In general, after having declared a new variable, it can be used and reused as many times as you want.
     </p>
    
     <p>
-      As usual, the <a href="http://www.w3schools.com/js/js_variables.asp">w3schools page on variables</a> is a fantastic resource worth reading and visiting often. Here are some other fun facts and features of variables:
-      <ul>
-        <li>Variables can be used and reused as many times as you want</li>
-        <li>Variables can hold different kinds or <b>types</b> of data (Numbers, Strings, and more!)</li>
-        <li>The name of a variable is very important for you and others reading your code.</li>
-        <li>The name of a variable can contain letters, numbers, underscores, and dollar signs. However it <i>cannot start with a number</i>. Also, <b>spaces</b> and <b>dashes</b> are <b>not</b> allowed in a variable name &mdash; having these characters in your variable name will throw an error.
-      </ul>
+      As usual, the <a href="http://www.w3schools.com/js/js_variables.asp">w3schools page on variables</a> is a fantastic resource worth reading and visiting often.
     </p>
 
+    <h2>Variable Types</h2>
+    <p>
+        What's the difference between:
+    </p>     
+    <pre><code>var label = "Do Not Disturb";
+// and
+var distance = 100;</code></pre>
+    <p>
+        The short answer is this: the first, <code>var label</code> is a <b>string</b> whereas the second, <code> var distance</code> is a <b>number</b>. In JavaScript, variables may have different <b>types</b> and each type of variable is used to represent a specific group of data.
+    </p>
+    <h3>Numbers</h3>
+    <p>
+      <b>Numbers</b> are what you would expect them to be in the real world &mdash; numerical values that can be added, subtracted, multiplied, divided, etc. 
+    </p>
+    <pre><code>// Examples
+var radius = 5; 
+var g = 9.81; // decimals count as numbers
+var piAsFraction = 22 / 7; // this is computed and stored as 3.142857142857143
+</code></pre>
+
+    <p>
+      We use the arithmetic (<code>+,-,*,/</code>) operators on numbers to do useful things like calculate someone's age or convert temperatures from fahrenheit to celsius. 
+    </p>
+
+    <p>
+      Let's look at some examples.
+    </p>
+
+    <pre><code>// Examples
+
+// calculating the circumference of a circle
+var radius = 5; 
+var PI = 3.14;
+
+// QUESTION: does the value of `PI` or `r` change after this operation?
+console.log( 2 * PI * r );
+
+// converting F -> C
+var F = 82;
+// notice how parenthesis can be used for order of operations
+var C = ( F - 32 ) / 1.8; 
+
+// QUESTION: what is stored inside the `C` variable?
+console.log( C ); 
+</code></pre>
+
+    <p>
+    (Optional) <b>Challenge</b>: can you write an expression using variables that will take our <code>C</code> value and convert it back to the fahrenheit scale?
+    </p>
+
+    <h3>Strings</h3>
+    <p>
+        A <b>string</b> can be used to represent words and sentences. Anything wrapped in quotations (either double or single) will be represented as a <b>string</b> in javascript (even if the thing in quotes is a number).
+    </p> 
+    <p>
+        <b>Most</b> arithmetic operators (<code>-,*,/</code>) do not work with strings. The <code>+</code> operator can be used to "add" or <b>concatenate</b> strings together.
+    </p>
+    <p>
+        Let's see this in action.
+    </p>
+    <pre><code>
+var name = "John"; // double quotes, this is string
+var lastName = 'Smith'; // SINGLE quotes, still string
+var fullName = name + " " + lastName; // John Smith
+// notice how the '+' in this case combines three strings into one string
+
+var stillAString = "2"; // this is still a string since wrapped in quotes
+
+var invalid = "John Smith'; // NOTE: the quote TYPES mismatch, not kosher
+</code></pre>
+
+    <p><b>Question</b>: what would happen if you pasted the <code>var invalid = "John Smith';</code> into codepen? </p>
+
+    <h2>Good Variable Names</h2>
+
+    <p>
+      Having good variable names is super important for you and others reading your code. You want the casing to be consistent across all the files in your project, and ideally consistent with the standards of the language. I like <a href="https://github.com/feross/standard">JavaScript Standard Style</a> but not everyone has the same style. The most popular casing for variables in JavaScript is called "Camel Cased" which starts with a lower case letter and only capitalizes the first letter of each internal word. Examples: <code>myNumber</code>, <code>sortedPrimeNumbers</code>, <code>listOfBestPizzaInNyc</code>.
+    </p>
+    <p>
+      You want your names to be as concise and as clear as possible. Being able to reason about what data is in a variable in the middle of a big and complicated program is important both for yourself and for when you share code. <b>You will read more code than you will write as a programmer</b>.
+    </p>
+    
+    <h3>Best Practices</h3>
+    <p>
+      Variable names <b>can</b> contain:
+      <ul>
+        <li>letters</li>
+        <li>numbers</li>
+        <li>underscores</li>
+        <li>dollar signs</li>
+      </ul>
+    </p>
+    <p>
+      Variable names <b>cannot</b> contain:
+      <ul>
+        <li>spaces</li>
+        <li>dashes</li>
+        <li>periods</li>
+      </ul>
+    </p>
+    <p>
+      Your variable names <b>cannot start with a number</b>, however you may choose to start your variable names with letters (lowercased or uppercased based on your discretion), underscores, or dollar signs. 
+    </p>
+
+    <p>Here are some examples of bad and better variable names.</p>
     <pre><code>// BAD variable names
 var 3.14isPi // can't start with number, can't have periods
 var hello everyone! // space and '!' not allowed
@@ -96,15 +195,6 @@ var helloEveryone // 'camel cased': individual words are capitalized
 var listOfAllUniqueNames // describes the type of data inside: a list
 var orderedListOfPrimeNumbers // describes the type and the organization: a sorted list
     </code></pre>
-
-    <h2>Good Variable Names</h2>
-
-    <p>
-      Having good variable names is super important. You want the casing to be consistent across all the files in your project, and ideally consistent with the standards of the language. I like <a href="https://github.com/feross/standard">JavaScript Standard Style</a> but not everyone has the same style. The most popular casing for variables in JavaScript is called "Camel Cased" which starts with a lower case letter and only capitalizes the first letter of each internal word. Examples: <code>myNumber</code>, <code>sortedPrimeNumbers</code>, <code>listOfBestPizzaInNyc</code>.
-    </p>
-    <p>
-      You want your names to be as concise and as clear as possible. Being able to reason about what data is in a variable in the middle of a big and complicated program is important both for yourself and for when you share code. <b>You will read more code than you will write as a programmer</b>.
-    </p>
 
     <h2>Evaluation / Execution of code</h2>
     <p>
@@ -145,13 +235,16 @@ someNumber *= x
 someNumber = someNumber / x
 someNumber /= x
 </code></pre>
-
+    
     <p>
       (Optional) <b>Challenge</b>: what is the value of <code>someNumber</code> at the end of the above code snippet? Walk through each line of code and try to compute the value of <code>someNumber</code> yourself. Then, paste the snippet above into codepen to check your answer.
     </p>
    
+    <p>
+(Optional) <b>Challenge</b>: what is the value of <code>someNumber</code> at the end of the above code snippet? Walk through each line of code and try to compute the value of <code>someNumber</code> yourself. Then, paste the snippet above into codepen to check your answer.
+    </p>
   </div>
-
+    
 </div>
 </div>
 </body>
