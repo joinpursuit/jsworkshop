@@ -47,7 +47,16 @@
     <h2>Finish this function:</h2>
 
     <p>
-      I set up the conditional part of the following function. It works because if the square-root of a number rounded down is the same then it's a whole number, and thus the input number is a perfect square.
+      A <b>perfect square</b> is defined as a number that has a square-root that is a <b>whole</b> number. For example:
+      <ul>
+        <li><b>9</b> has a square root of <b>3</b>, which is a whole number. It is a perfect square.</li>
+        <li><b>16</b> has a square root of <b>4</b>, which is a whole number. It is a perfect square.</li>
+        <li><b>2</b> has a square root of approximately <b>1.414</b>, which is <b>NOT</b> a whole number. It is <b>NOT</b> a perfect square.</li>
+      </ul>
+    </p>
+
+    <p>
+      I set up the conditional part of the <code>isPerfectSquare</code> function. It works because if the square-root of a number and the <i>rounded down value</i> of that square-root is the same then it's a whole number, and thus the input number is a perfect square.
     </p>
 
     <pre><code>var isPerfectSquare = function(arg) {
@@ -58,7 +67,12 @@
   } else {
     // It's not
   }
-}</code></pre>
+}
+
+isPerfectSquare(9); // returns true
+isPerfectSquare(16); // returns true
+isPerfectSquare(2); // return false
+</code></pre>
 
     <p>
       Fill out the function such that it can be used anywhere to determine if a number is a perfect square or not. Test it by running it many times with both numbers that are and aren't perfect squares.
