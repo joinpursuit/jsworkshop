@@ -58,12 +58,11 @@
       Paste the following code into codepen, and then re-size the window and click run. What happens?
     </p>
 
-    <pre><code>if(window.innerWidth > 1000) {
+    <pre><code>if(parent.window.innerWidth > 1000) {
   console.log('The window is over 1000px')
 } else {
   console.log('The window is less than 1000px')
-}
-</code></pre>
+}</code></pre>
     
     <p>
       Else blocks are not required, it's ok to have an if statement without an else block.
