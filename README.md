@@ -6,9 +6,9 @@ Javascript workshop for prospective AccessCode students to learn JS, and help C4
 ## The course is divided into sections:
 
 1. Logging
-2. Variables
-3. Arrays
-4. Loops
-5. Conditionals
-6. Functions
+1. Variables
+1. Arrays
+1. Conditionals
+1. Loops
+1. Functions
 
