@@ -49,11 +49,11 @@ body {
 }
 .navigation-link-item a:visited {
   color: white;
-  
+
 }
 .navigation-link-item a:hover {
   color: black;
-  
+
 }
 .content {
   width:100%;
@@ -61,7 +61,7 @@ body {
   padding:40px;
 
 }
-.content > * { 
+.content > * {
   max-width: 1024px;
   margin-left: auto;
   margin-right: auto;
@@ -101,4 +101,7 @@ pre {
 }
 code {
   background-color: #eff0f1;
+}
+ol, ul {
+  padding-left: 50px;
 }
