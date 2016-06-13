@@ -83,9 +83,9 @@ console.log("Student's favorite language was " + studentsFavLanguage)
     <p>
         What's the difference between:
     </p>     
-    <pre><code>var label = "Do Not Disturb";
+    <pre><code>var label = "Do Not Disturb"
 // and
-var distance = 100;</code></pre>
+var distance = 100</code></pre>
     <p>
         The short answer is this: the first, <code>var label</code> is a <b>string</b> whereas the second, <code> var distance</code> is a <b>number</b>. In JavaScript, variables may have different <b>types</b> and each type of variable is used to represent a specific group of data.
     </p>
@@ -94,9 +94,9 @@ var distance = 100;</code></pre>
       <b>Numbers</b> are what you would expect them to be in the real world &mdash; numerical values that can be added, subtracted, multiplied, divided, etc. 
     </p>
     <pre><code>// Examples
-var radius = 5; 
-var g = 9.81; // decimals count as numbers
-var piAsFraction = 22 / 7; // this is computed and stored as 3.142857142857143
+var radius = 5
+var g = 9.81 // decimals count as numbers
+var piAsFraction = 22 / 7 // this is computed and stored as 3.142857142857143
 </code></pre>
 
     <p>
@@ -110,19 +110,19 @@ var piAsFraction = 22 / 7; // this is computed and stored as 3.142857142857143
     <pre><code>// Examples
 
 // calculating the circumference of a circle
-var radius = 5; 
-var PI = 3.14;
+var radius = 5
+var PI = 3.14
 
 // QUESTION: does the value of `PI` or `r` change after this operation?
-console.log( 2 * PI * r );
+console.log( 2 * PI * radius )
 
 // converting F -> C
-var F = 82;
+var F = 82
 // notice how parenthesis can be used for order of operations
-var C = ( F - 32 ) / 1.8; 
+var C = ( F - 32 ) / 1.8
 
 // QUESTION: what is stored inside the `C` variable?
-console.log( C ); 
+console.log( C )
 </code></pre>
 
     <p>
@@ -140,14 +140,14 @@ console.log( C );
         Let's see this in action.
     </p>
     <pre><code>
-var name = "John"; // double quotes, this is string
-var lastName = 'Smith'; // SINGLE quotes, still string
-var fullName = name + " " + lastName; // John Smith
+var name = "John" // double quotes, this is string
+var lastName = 'Smith' // SINGLE quotes, still string
+var fullName = name + " " + lastName // John Smith
 // notice how the '+' in this case combines three strings into one string
 
-var stillAString = "2"; // this is still a string since wrapped in quotes
+var stillAString = "2" // this is still a string since wrapped in quotes
 
-var invalid = "John Smith'; // NOTE: the quote TYPES mismatch, not kosher
+var invalid = "John Smith' // NOTE: the quote TYPES mismatch, not kosher
 </code></pre>
 
     <p><b>Question</b>: what would happen if you pasted the <code>var invalid = "John Smith'</code> into repl.it? </p>
