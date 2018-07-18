@@ -3,12 +3,12 @@
 <head>
 
   <title>AC Workshop - Lecture: Functions</title>
-  
+
   <link rel="stylesheet" type="text/css" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/default.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
-  
+
 </head>
 <body>
 <div class="container">
@@ -44,7 +44,7 @@
     </p>
 
     <pre><code>// This is a "function definition"
-var myFirstFunction = function(arg1, arg2) {
+const myFirstFunction = function(arg1, arg2) {
   // This function has TWO parameters.
   // This is a "return statement"
   return arg1 + arg2 / 2
@@ -53,25 +53,25 @@ var myFirstFunction = function(arg1, arg2) {
 myFirstFunction(1, 2) // These are "function calls."  The arguments are 1 and 2.
 myFirstFunction(2, 3)
 myFirstFunction(10, 100)</code></pre>
-    
+
     <p>
       There are some important keywords that we use when talking about functions:
     </p>
 
     <ul>
+      <li><b>Function definition</b>: The declaration and code that describes the function. In JavaScript, we use the <code>function</code> keyword</li>
       <li><b>Parameters</b>: When defining a function, the paramenters are the inputs</li>
       <li><b>Arguments</b>:  When calling a function, the arguments are the input variables</li>
       <li><b>Function Call</b>: Running or executing a function is referred to as a "function call" or "calling the function". In JavaScript (and in the vast majority of languages) this is done with parenthesis after the name of the function</li>
       <li><b>Return value</b>: The value that the function evaluates to when it is called. Inside the function it is declared using the <code>return</code> keyword</li>
-      <li><b>Function definition</b>: The declaration and code that describes the function. In JavaScript, we use the <code>function</code> keyword</li>
       <li><b>Function signature</b>: The function name and parameters combined are what is called a "function signature"</li>
     </ul>
 
-    <pre><code>var square = function(inputInt) {
+    <pre><code>const square = function(inputInt) {
   return inputInt * inputInt
 }
 
-var result = square(2)
+let result = square(2)
 result = square(10)
 // Now let's push our brains a bit:
 result = square(result)
@@ -79,7 +79,7 @@ result = square(result)
 result = square(square(2))</code></pre>
 
     <p>
-      The fact that we can chain functions is not a special feature of functions. Instead it's a peek into how "evaluation of expressions" work. In <code>square(square(2))</code> The argument to the outer call to square is the result of the evaluation of <code>square(2)</code> which is just <code>4</code>.
+      The fact that we can chain functions is not a special feature of functions. Instead it's a peek into how "evaluation of expressions" work. In <code>square(square(2))</code> The argument to the outer call to square is the result of the evaluation of <code>square(2)</code> which is just <code>4</code>. In other words, you do <code>square(2)</code> first, and then call square again on the result of that inner function call.
     </p>
 
     <h2>Functions can call other functions</h2>
@@ -88,20 +88,20 @@ result = square(square(2))</code></pre>
       One very powerful tool of functions is the ability to call other functions. You can chain them, run them inside loops or conditionals, really anything you can imagine!
     </p>
 
-    <pre><code>var sumOfSquares = function(x, y) {
+    <pre><code>const sumOfSquares = function(x, y) {
   return square(x) + square(y)
 }
 </code></pre>
 
-    <h2>Let's See it in action</h2>
+    <h2>Let's see it in action</h2>
     <p>
       Let's try migrating a couple of our interesting challenges from the last set of exercises into functions. We'll do the first one together:
     </p>
 
-    <pre><code>var findLargestElement = function(inputArray) {
+    <pre><code>const findLargestElement = function(inputArray) {
   // This is the code you wrote earlier!
   // Only now the "given" variable is explicitly an argument to the function
-  var largestElement = inputArray[0]
+  let largestElement = inputArray[0]
   for (var i = 0; i < inputArray.length; i++) {
     if (inputArray[i] > largestElement) {
       largestElement = inputArray[i]
@@ -112,7 +112,7 @@ result = square(square(2))</code></pre>
 }
 
 // Now we can re-use this function for any input we want!
-var result = findLargestElement([1,2,99,100,55,32,80])
+let result = findLargestElement([1,2,99,100,55,32,80])
 </code></pre>
 
     <h2>Now migrate the rest on your own</h2>
