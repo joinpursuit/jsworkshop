@@ -3,12 +3,12 @@
 <head>
 
   <title>AC Workshop - Activity: Arrays</title>
-  
+
   <link rel="stylesheet" type="text/css" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/default.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
-  
+
 </head>
 <body>
 <div class="container">
@@ -38,18 +38,18 @@
 
   <div class="content">
     <h1>Activity: Arrays</h1>
-    
+
     <p>
       Let's start with an array of some films, books, or tv shows that you like:
     </p>
 
-    <pre><code>var films = ["Starship Troopers", "Total Recall", "Robocop", "Basic Instinct"]
-var books = ["East of Eden", "White Noise", "100 Years of Solitude"]</code></pre>
+    <pre><code>let films = ["Starship Troopers", "Total Recall", "Robocop", "Basic Instinct"]
+let books = ["East of Eden", "White Noise", "100 Years of Solitude"]</code></pre>
 
     <p>
       And then let's use the <code>.push()</code> method to add more names!
     </p>
-    
+
     <pre><code>//Let's add some values to our array using `.push()`
 console.log("I have " + films.length + " favorite films")
 //Push some more and see the length change!</code></pre>
@@ -61,18 +61,19 @@ console.log("I have " + films.length + " favorite films")
       This code is trying to change the value of the <b>first</b> element to -10 and the value of the <b>last</b> element to 10, but it's broken! Why?!
     </p>
 
-    <pre><code>array = 66,27,108,44,92,1,100
-array[1] = -10
-array[array.length] = 10</code></pre>
+    <pre><code>myArray = 66,27,108,44,92,1,100
+myArray[1] = -10
+myArray[array.length] = 10</code></pre>
 
     <h2>Pair with a new neighbor for these challenges!</h2>
-    
+
     <ol>
-      <li>Log the first element of your array</li>
-      <li>Log the second element of your array</li>
+      <li>Create an array and assign it to a variable.</li>
+      <li>Log the first element of your array.</li>
+      <li>Log the second element of your array.</li>
       <li>Log the last element of your array. <i>Hint: how can you find out how long your array is?</i> It should always print out the last element even if you add or remove elements from the array</li>
-      <li>Log the second to last element of your array</li>
-      <li>Log the middle element of the array (rounded down if there are an even number of elements)</li>
+      <li>Log the second to last element of your array.</li>
+      <li>Log the middle element of the array (rounded down if there are an even number of elements).</li>
     </ol>
 
   </div>
