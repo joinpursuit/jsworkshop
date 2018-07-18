@@ -3,12 +3,12 @@
 <head>
 
   <title>AC Workshop - Lecture: Conditionals</title>
-  
+
   <link rel="stylesheet" type="text/css" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/default.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
-  
+
 </head>
 <body>
 <div class="container">
@@ -38,7 +38,7 @@
 
   <div class="content">
     <h1>Lecture: Conditionals</h1>
-    
+
     <p>
       So far we've only made the computer do pretty simple stuff, and no matter what it always did the SAME stuff. But how does the computer handle different situations? Let's learn the <code>if</code> statement:
     </p>
@@ -64,7 +64,7 @@
 } else {
   console.log('The window is less than 1000px')
 }</code></pre>
-    
+
     <p>
       Else blocks are not required, it's ok to have an if statement without an else block.
     </p>
@@ -78,15 +78,15 @@ console.log("This code will ALWAYS run regardless of whether the condition is tr
     </p>
 
     <pre><code>var someBoolean = true
-var aDifferentBoolean = false
-var isZeroEqualToZero = 0 == 0
-var isZeroEqualToOne = 0 == 1
-var isZeroGreaterThanZero = 0 > 0
-var isZeroLessThanOne = 0 < 1
+const aDifferentBoolean = false
+const isZeroEqualToZero = 0 == 0
+const isZeroEqualToOne = 0 == 1
+const isZeroGreaterThanZero = 0 > 0
+const isZeroLessThanOne = 0 < 1
 // Try logging these different values to the console.
 // You should know which ones are true and which ones are false!
 console.log(isZeroLessThanOne)</code></pre>
-    
+
     <p>
       Here are a list of the most common ways booleans are made:
     </p>
@@ -122,7 +122,7 @@ console.log(isZeroLessThanOne)</code></pre>
       Ok let's combine the boolean type with the <code>if</code> statement to see some real code!
     </p>
 
-    <pre><code>var userName = "Benno"
+    <pre><code>let userName = "Benno"
 
 if (userName == "Benno") {
   console.log("Welcome Benno!")
@@ -134,7 +134,7 @@ if (userName == "Benno") {
       An important strategy is to chain <code>if/else</code> statements. This allows you to conditionally evaluate the <code>else</code> block on whatever condition you want. Let's look at an example:
     </p>
 
-    <pre><code class="javascript">var userAge = 29
+    <pre><code class="javascript">let userAge = 29
 
 if (userAge >= 21) {
   // userAge is 21 or higher
@@ -165,7 +165,7 @@ if (userAge == 18 || userAge == 21) {
   console.log("Congrats on the big milestone year!")
 }</code></pre>
 
-    
+
   </div>
 
 </div>

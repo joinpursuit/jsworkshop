@@ -3,12 +3,12 @@
 <head>
 
   <title>AC Workshop - Lecture: Arrays</title>
-  
+
   <link rel="stylesheet" type="text/css" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/default.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
-  
+
 </head>
 <body>
 <div class="container">
@@ -38,7 +38,7 @@
 
   <div class="content">
     <h1>Lecture: Loops</h1>
-    
+
     <p>
       Imagine if we wanted to print out ALL the elements of an array. Or the even numbers between 0 and 100. Or even just repeat the same thing - like "text my mom something nice" or "text my ex something mean" - 100 times?
     </p>
@@ -67,10 +67,10 @@ console.log(15)</code></pre>
       Computers are not very smart, but they are <i>very</i> good at doing repetetive tasks. How? They use <b>loops</b>!
     </p>
 
-<pre><code>for (var i = 0; i < 100; i++) {
+<pre><code>for (let i = 0; i < 100; i++) {
   console.log(i)
 }</code></pre>
-    
+
     <p>
       So what's going on here? Let's break it down:
     </p>
@@ -78,7 +78,7 @@ console.log(15)</code></pre>
     <p>
       The loop has four major sections:
       <ol>
-        <li>Initialization: <code>var i = 0</code></li>
+        <li>Initialization: <code>let i = 0</code></li>
         <li>Condition: <code>i < 100</code></li>
         <li>Increment: <code>i++</code></li>
         <li>Body: <code>console.log(i)</code></li>
@@ -91,7 +91,7 @@ console.log(15)</code></pre>
 
     <h2>Initialization</h2>
     <p>
-      The <b>initialization</b> is where you set up the variables that you need for your loop. The most common is <code>var i = 0;</code> but you can start at anything, for example: <code>1</code> or <code>1000000</code>, depending on what your program is doing.
+      The <b>initialization</b> is where you set up the variables that you need for your loop. The most common is <code>let i = 0;</code> but you can start at anything, for example: <code>1</code> or <code>1000000</code>, depending on what your program is doing.
     </p>
     <p>
       <b>Challenge Question:</b> What would the initialization be if we wanted to start our index at the END of an array and work backwards?
@@ -121,18 +121,18 @@ console.log(15)</code></pre>
       <b>Challenge Question:</b> Now that we have all the pieces, write a program that iterates through an array from the back to the front and prints out only the values at the odd indices.
     </p>
 
-    <pre><code>var myArray = [7, 24, 25, 9, 40, 41, 11, 60, 61];
+    <pre><code>const myArray = [7, 24, 25, 9, 40, 41, 11, 60, 61];
 // your program should output: 60,41,9,24</code></pre>
 
     <p>
     <b>Challenge Question:</b> write a program that iterates through an array from the front to the back and prints out only the <b>odd</b> values.
     </p>
-    
-    <pre><code>var myArray = [7, 24, 25, 9, 40, 41, 11, 60, 61];
+
+    <pre><code>const myArray = [7, 24, 25, 9, 40, 41, 11, 60, 61];
 // your program should output: 7,25,9,41,11,61</code></pre>
 
   </div>
-  
+
 </div>
 </div>
 </body>

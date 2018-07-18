@@ -3,12 +3,12 @@
 <head>
 
   <title>AC Workshop - Lecture: Arrays</title>
-  
+
   <link rel="stylesheet" type="text/css" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/default.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
-  
+
 </head>
 <body>
 <div class="container">
@@ -38,30 +38,30 @@
 
   <div class="content">
     <h1>Lecture: Arrays</h1>
-    
+
     <h2>What is an array?</h2>
     <p>
       An array in JavaScript is a <b>data structure</b> that contains an <b>ordered collection</b> of <b>elements</b>. Each element is numbered starting at <code>0</code>, this is called the <b>index</b>.
     </p>
-    
+
     <img src="http://www.introprogramming.info/wp-content/uploads/2013/07/clip_image00213_thumb.png">
     <div class="image-label">
-      Taken from 
+      Taken from
       <a href="http://www.introprogramming.info/">http://www.introprogramming.info/</a>
     </div>
-    
+
     <p>
-      Remember how variables were like labeled boxes? Imagine if we lined up a bunch of boxes next to each other, and now we can use how far they are from the "first" box (let's assume the first box is the one on the far left) as their label. An array is a <b>numbered list of variables</b>.
+      Remember how variables were like labeled boxes? Imagine if we lined up a bunch of boxes next to each other, and now we can use how far they are from the "first" box (let's assume the first box is the one on the far left) as their label. An array is (sort of) a <b>numbered list of variables</b>.
     </p>
-    
+
     <pre><code>// this is an empty array
-var myFirstArray = []
+const myFirstArray = []
 // this array is created with 8 elements
-var anArrayWithNumbersInIt = [1, 1, 2, 3, 5, 8, 13, 21]
+const anArrayWithNumbersInIt = [1, 1, 2, 3, 5, 8, 13, 21]
 // this one, with 5
-var anArrayWithStringsInIt = ["pizza", "bagel", "pho", "bao", "curry"]
+const anArrayWithStringsInIt = ["pizza", "bagel", "pho", "bao", "curry"]
 // and so forth
-var anArrayWithRandomStuff = ["generally", 100, "don't", 200, "do", 300, "this"]</code></pre>
+const anArrayWithRandomStuff = ["generally", 100, "don't", 200, "do", 300, "this"]</code></pre>
 
     <p>
       You can use <code>console.log(myArray)</code> to inspect the contents of an array.
@@ -72,8 +72,8 @@ var anArrayWithRandomStuff = ["generally", 100, "don't", 200, "do", 300, "this"]
     <p>
       To read data from an array we use the square bracket syntax: <code>array[index]</code> to get a value out of an array at the given index.
     </p>
-    
-    <pre><code>var anArrayWithNumbersInIt = [ 11, 121, 1331 ];
+
+    <pre><code>const anArrayWithNumbersInIt = [ 11, 121, 1331 ];
 console.log("first element: " + anArrayWithNumbersInIt[0])
 console.log("second element: " + anArrayWithNumbersInIt[1])
 console.log("third element: " + anArrayWithNumbersInIt[2])
@@ -82,23 +82,23 @@ console.log("21st element: " + anArrayWithNumbersInIt[20]) // what happens?</cod
     <p>
       To write data to an array, we use the same syntax but include the <code>=</code> assignment operator we learned earlier.
     </p>
-    
+
     <pre><code>anArrayWithNumbersInIt[0] = -1
 anArrayWithNumbersInIt[1] = -2
 anArrayWithNumbersInIt[2] = -3
 
 // what do you expect the output to be below?
-console.log( anArrayWithNumbersInIt ); 
+console.log( anArrayWithNumbersInIt );
 
 anArrayWithNumbersInIt[20] = -21 // What happens here?</code></pre>
 
     <p>
       It's good to understand what happens in weird cases like the last line above, however you should almost <b>never</b> do that, and when you do it is often a bug.
     </p>
-    
+
     <h2>Methods and Properties of Arrays</h2>
     <p>
-      Arrays are a part of a more complex variable type in JavaScript, called <b>objects</b>. We won't go over objects too much here, but it's important to know that objects have methods and properties that can be accessed via the <code>.</code> operator.
+      Arrays are a part of a more complex variable type in JavaScript, called <b>objects</b>. Just like a decimal is a decimal but also a number, arrays are arrays <b>but also objects</b>. We won't go over objects too much here, but it's important to know that objects have methods and properties that can be accessed via the <code>.</code> operator &mdash; and this includes arrays.
     </p>
 
     <p>
@@ -108,18 +108,18 @@ anArrayWithNumbersInIt[20] = -21 // What happens here?</code></pre>
     <h3>Array Properties</h3>
     <p>A property of an object (in this case our array) is a <b>value</b> (just like the other variables we've discussed so far). Arrays only have one property, <b>.length</b>.</p>
 
-    <pre><code>var fruits = ["Banana", "Orange", "Apple", "Mango"]
+    <pre><code>const fruits = ["Banana", "Orange", "Apple", "Mango"]
 console.log("The length of fruits is " + fruits.length)  // 4
 
 // skipping letter trains because there are a lot...
-var nycTrains = [ "1", "2", "3", "4", "5", "6", "7" ];
+const nycTrains = [ "1", "2", "3", "4", "5", "6", "7" ];
 console.log("The length of nycTrains is " + nycTrains.length)  // 7
 </code></pre>
 
     <h3>Array Methods</h3>
-    
+
     <p>
-      A method of an object (in this case our array) is some <b>code</b> that performs a bunch of operations (similar to our company revenue calculator from the <a href="activity-variables.html">Variables</a> activity). 
+      A method of an object (in this case our array) is some <b>code</b> that performs a bunch of operations (similar to our company revenue calculator from the <a href="activity-variables.html">Variables</a> activity).
     </p>
 
     <p>
@@ -127,7 +127,7 @@ console.log("The length of nycTrains is " + nycTrains.length)  // 7
     </p>
 
     <pre><code>// Can you guess what the following method does?
-var fruits = ["Banana", "Orange", "Apple", "Mango"]
+let fruits = ["Banana", "Orange", "Apple", "Mango"]
 fruits.push("Papaya")
 console.log("The length of fruits is " + fruits.length)  // 5
 console.log( fruits ); // what do you expect to see in this array now?
@@ -135,10 +135,10 @@ console.log( fruits ); // what do you expect to see in this array now?
 
 
     <p>
-      You can find a great tutorial (including some advanced topics about Objects that we won't cover in this workshop) <a href="http://www.w3schools.com/js/js_arrays.asp">here at w3schools</a>. The <a href="http://www.w3schools.com/jsref/jsref_obj_array.asp">array reference documentation at w3schools</a> is extremely helpful as well. Go there to look up the different methods and properties on arrays. Note the only useful property is <code>length</code>, but it's a very important one!
+      You can find a great tutorial (including some advanced topics about objects that we won't cover in this workshop) <a href="http://www.w3schools.com/js/js_arrays.asp">here at w3schools</a>. The <a href="http://www.w3schools.com/jsref/jsref_obj_array.asp">array reference documentation at w3schools</a> is extremely helpful as well. Go there to look up the different methods and properties on arrays. Note the only useful property is <code>length</code>, but it's a very important one!
     </p>
 
-   
+
   </div>
 
 </div>

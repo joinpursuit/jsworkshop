@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  
+
   <title>AC Workshop - Lecture: Variables</title>
-  
+
   <link rel="stylesheet" type="text/css" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/default.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
-  
+
 </head>
 <body>
 <div class="container">
@@ -38,69 +38,70 @@
 
   <div class="content">
     <h1>Lecture: Variables</h1>
-    
+
     <h2>What is a Variable?</h2>
-    
+
     <p>
       A good analogy is a <b>labeled box</b>. Outside is the label, inside is something, and it could be anything!
     </p>
     <img width="500px" src="http://2.bp.blogspot.com/-guGunS9ljms/Ui-sF7Q9yQI/AAAAAAAAACU/DdnRgAARYyI/s1600/box.png"/>
     <div class="image-label">(Stolen from Khan Academy)</div>
-    
+
     <p>
       Officially:
-      A variable is a <b>container</b>. It has both a <b>name</b> and a <b>value</b>. You <b>declare</b> a new variable with the <code>var</code> keyword, and <b>assign</b> it (aka give it) a value with the <code>=</code> sign.
+      A variable is a <b>container</b>. It has both a <b>name</b> and a <b>value</b>. You <b>declare</b> a new variable with the <code>const</code> or <code>let</code> keyword (more on that later), and <b>assign</b> it (aka give it) a value with the <code>=</code> sign.
     </p>
-    <pre><code>var variableOne = 1
-var variableTwo = "Two"
-var bensFavLanguage = "JavaScript"
-console.log("Ben's favorite language is: " + bensFavLanguage)
+    <pre><code>const variableOne = 1;
+const variableTwo = "Two";
+const bensFavLanguage = "JavaScript";
+console.log("Ben's favorite language is: " + bensFavLanguage);
 // Ben's favorite language is: JavaScript</code></pre>
     <p>
       In JavaScript the <b>value</b> of a variable can change, but the name cannot.
-      However, you can assign variables with values from other variables.
+      However, this value can only change if you use <code>let</code> to declare your variable. <code>const</code> is, like its name implies, constant!
+      However, using let, you can re-assign variables with new values &mdash; even values from other variables.
     </p>
-    
-    <pre><code>var bensFavLanguage = "JavaScript"
-var studentsFavLanguage = "French"
-console.log("Student's favorite language was " + studentsFavLanguage)
+
+    <pre><code>const bensFavLanguage = "JavaScript";
+let studentsFavLanguage = "French";
+console.log("Student's favorite language was " + studentsFavLanguage);
 // Student's favorite language was French
 
 // .... after this lecture ....
-studentsFavLanguage = bensFavLanguage
-console.log("Student's favorite language was " + studentsFavLanguage)
-// Student's favorite language was JavaScript</code></pre>
+studentsFavLanguage = bensFavLanguage;
+console.log("Student's favorite language is " + studentsFavLanguage);
+// Student's favorite language is JavaScript</code></pre>
 
     <p>
-      Notice how in the code snippet above our second <code>console.log</code> statement is identical to the first <code>console.log</code> statement but the output is drastically different since the value of the var <code>studentsFavLanguage</code> has changed. In general, after having declared a new variable, it can be used and reused as many times as you want.
+      Notice how in the code snippet above our second <code>console.log</code> statement is nearly identical to the first <code>console.log</code> statement but the output is drastically different since the value of the variable <code>studentsFavLanguage</code> has changed. In general, after you've declared a new variable, it can be used and reused as many times as you want.
     </p>
-   
+
     <p>
       As usual, the <a href="http://www.w3schools.com/js/js_variables.asp">w3schools page on variables</a> is a fantastic resource worth reading and visiting often.
     </p>
 
-    <h2>Variable Types</h2>
+    <h2>Data Types</h2>
     <p>
         What's the difference between:
-    </p>     
-    <pre><code>var label = "Do Not Disturb"
+    </p>
+    <pre><code>const label = "Do Not Disturb";
 // and
-var distance = 100</code></pre>
+const distance = 100;</code></pre>
     <p>
-        The short answer is this: the first, <code>var label</code> is a <b>string</b> whereas the second, <code> var distance</code> is a <b>number</b>. In JavaScript, variables may have different <b>types</b> and each type of variable is used to represent a specific group of data.
+        The short answer is this: the first, <code>const label</code>, is a <b>string</b>, whereas the second, <code>const distance</code>, is a <b>number</b>. In JavaScript, data may have different <b>types</b> and each variable is used to represent a specific piece of data, complete with a type.
     </p>
     <h3>Numbers</h3>
     <p>
-      <b>Numbers</b> are what you would expect them to be in the real world &mdash; numerical values that can be added, subtracted, multiplied, divided, etc. 
+      <b>Numbers</b> are what you would expect them to be in the real world &mdash; numerical values that can be added, subtracted, multiplied, divided, etc.
     </p>
     <pre><code>// Examples
-var radius = 5
-var g = 9.81 // decimals count as numbers
-var piAsFraction = 22 / 7 // this is computed and stored as 3.142857142857143
+const radius = 5;
+const g = 9.81; // decimals count as numbers
+const piAsFraction = 22 / 7; // this is computed and stored as 3.142857142857143
 </code></pre>
 
     <p>
-      We use the arithmetic (<code>+,-,*,/</code>) operators on numbers to do useful things like calculate someone's age or convert temperatures from fahrenheit to celsius. 
+      We use the arithmetic (<code>+,-,*,/</code>) operators on numbers to do useful things like calculate someone's age or convert temperatures from Fahrenheit to Celsius.
     </p>
 
     <p>
@@ -110,19 +111,19 @@ var piAsFraction = 22 / 7 // this is computed and stored as 3.142857142857143
     <pre><code>// Examples
 
 // calculating the circumference of a circle
-var radius = 5
-var PI = 3.14
+const radius = 5;
+const PI = 3.14;
 
-// QUESTION: does the value of `PI` or `radius` change after this operation?
-console.log( 2 * PI * radius )
+// Note that we aren't actually changing the value of PI or radius with this console.log. They only change if we create them with let, and even then, we need an equals sign (=) to reassign them
+console.log( 2 * PI * radius );
 
 // converting F -> C
-var F = 82
+const F = 82;
 // notice how parenthesis can be used for order of operations
-var C = ( F - 32 ) / 1.8
+let C = ( F - 32 ) / 1.8;
 
 // QUESTION: what is stored inside the `C` variable?
-console.log( C )
+console.log( C );
 </code></pre>
 
     <p>
@@ -132,7 +133,7 @@ console.log( C )
     <h3>Strings</h3>
     <p>
         A <b>string</b> can be used to represent words and sentences. Anything wrapped in quotations (either double or single) will be represented as a <b>string</b> in javascript (even if the thing in quotes is a number).
-    </p> 
+    </p>
     <p>
         <b>Most</b> arithmetic operators (<code>-,*,/</code>) do not work with strings. The <code>+</code> operator can be used to "add" or <b>concatenate</b> strings together.
     </p>
@@ -140,27 +141,27 @@ console.log( C )
         Let's see this in action.
     </p>
     <pre><code>
-var name = "John" // double quotes, this is string
-var lastName = 'Smith' // SINGLE quotes, still string
-var fullName = name + " " + lastName // John Smith
+const firstName = "John"; // double quotes, this is string
+const lastName = 'Smith'; // SINGLE quotes, still string
+const fullName = firstName + " " + lastName; // John Smith
 // notice how the '+' in this case combines three strings into one string
 
-var stillAString = "2" // this is still a string since wrapped in quotes
+const stillAString = "2"; // this is still a string since wrapped in quotes
 
-var invalid = "John Smith' // NOTE: the quote TYPES mismatch, not kosher
+const invalid = "John Smith'; // NOTE: the quote TYPES mismatch, not kosher
 </code></pre>
 
-    <p><b>Question</b>: what would happen if you pasted the <code>var invalid = "John Smith'</code> into repl.it? </p>
+    <p><b>Question</b>: what would happen if you pasted the <code>const invalid = "John Smith';</code> into repl.it? </p>
 
     <h2>Good Variable Names</h2>
 
     <p>
-      Having good variable names is super important for you and others reading your code. You want the casing to be consistent across all the files in your project, and ideally consistent with the standards of the language. I like <a href="https://github.com/feross/standard">JavaScript Standard Style</a> but not everyone has the same style. The most popular casing for variables in JavaScript is called "Camel Cased" which starts with a lower case letter and only capitalizes the first letter of each internal word. Examples: <code>myNumber</code>, <code>sortedPrimeNumbers</code>, <code>listOfBestPizzaInNyc</code>.
+      Having good variable names is super important for you and others reading your code. You want the casing to be consistent across all the files in your project, and ideally consistent with the standards of the language. I like <a href="https://github.com/feross/standard">JavaScript Standard Style</a> but not everyone has the same style. The most popular casing for variables in JavaScript is called "Camel Case" which starts with a lower case letter and only capitalizes the first letter of each internal word. Examples: <code>myNumber</code>, <code>sortedPrimeNumbers</code>, <code>listOfBestPizzaInNyc</code>.
     </p>
     <p>
       You want your names to be as concise and as clear as possible. Being able to reason about what data is in a variable in the middle of a big and complicated program is important both for yourself and for when you share code. <b>You will read more code than you will write as a programmer</b>.
     </p>
-    
+
     <h3>Best Practices</h3>
     <p>
       Variable names <b>can</b> contain:
@@ -180,47 +181,47 @@ var invalid = "John Smith' // NOTE: the quote TYPES mismatch, not kosher
       </ul>
     </p>
     <p>
-      Your variable names <b>cannot start with a number</b>, however you may choose to start your variable names with letters (lowercased or uppercased based on your discretion), underscores, or dollar signs. 
+      Your variable names <b>cannot start with a number</b>. However, you may choose to start your variable names with letters (lowercased or uppercased based on your discretion), underscores, or dollar signs.
     </p>
 
     <p>Here are some examples of bad and better variable names.</p>
     <pre><code>// BAD variable names
-var 3.14isPi // can't start with number, can't have periods
-var hello everyone! // space and '!' not allowed
-var this-is-also-not-kosher-as-a-variable-name-for-use-later
+const 3.14isPi // can't start with number, can't have periods
+const hello everyone! // space and '!' not allowed
+const this-is-also-not-kosher-as-a-variable-name-for-use-later
 // has dashes, OPINION: too long, concise names are better
 
 // BETTER variable names
-var pi // all lower cased, simple and succinct 
-var helloEveryone // 'camel cased': individual words are capitalized
-var listOfAllUniqueNames // describes the type of data inside: a list
-var orderedListOfPrimeNumbers // describes the type and the organization: a sorted list
+const pi // all lower cased, simple and succinct
+const helloEveryone // 'camel cased': individual words are capitalized
+const listOfAllUniqueNames // describes the type of data inside: a list
+cosnt orderedListOfPrimeNumbers // describes the type and the organization: a sorted list
     </code></pre>
 
     <h2>Evaluation / Execution of code</h2>
     <p>
-      The word we use to describe turning a set of code into a single value is called <b>evaluate</b> or <b>execute</b>. This is useful to think about in situations where we assign the result of some math to a variable:
+      The word we use to describe turning a set of code into a single value is called <b>evaluating</b> or <b>executing</b> the code. This is useful to think about in situations where we assign the result of some math to a variable:
     </p>
-    <pre><code>var x = 10
-var y = 20
-var someVariable = (100 * x / y) - x*y
-x = 0
-y = 0
-console.log(someVariable)
+    <pre><code>let x = 10;
+let y = 20;
+const someVariable = (100 * x / y) - x * y;
+x = 0;
+y = 0;
+console.log(someVariable);
 // -150</code></pre>
     <p>
-      The value of some variable is decided at the moment of assignment when that line of code gets <b>executed</b> and the <b>expression</b> on the right side of the assignment gets <b>evaluated</b>.
+      The value of some variable is decided at the moment of assignment when that line of code gets <b>executed</b> and the <b>expression</b> on the right side of the assignment gets <b>evaluated</b>. The point of this, fundamentally, is that JavaScript reads top-to-bottom, and with very few exceptions, won't backtrack to update values that have changed. Believe it or not, this is a <b>good thing</b>. It lets us change variables to update them without worrying about the previous code we've evaluated.
     </p>
 
-    <h2>Useful and important syntax</h2>    
-    <pre><code class="javascript">var someNumber = 0
-var x = 5 // We'll use this later
+    <h2>Useful and important syntax</h2>
+    <pre><code class="javascript">let someNumber = 0;
+const x = 5; // We'll use this later
 
 //Increment: take a value and increase it by 1
-someNumber = someNumber + 1
-someNumber += 1 // This and the above line can be any number
-someNumber++
-++someNumber
+someNumber = someNumber + 1;
+someNumber += 1; // This and the above line can be any number
+someNumber++;
+++someNumber;
 
 //Decrement: take a value and decrease it by 1
 someNumber = someNumber - 1
@@ -229,20 +230,20 @@ someNumber--
 --someNumber
 
 //Multiply: take a value and multiply it by x
-someNumber = someNumber * x
-someNumber *= x
+someNumber = someNumber * x;
+someNumber *= x;
 
 //Divide: take a value and divide it by x
-someNumber = someNumber / x
-someNumber /= x
+someNumber = someNumber / x;
+someNumber /= x;
 </code></pre>
-    
+
     <p>
       (Optional) <b>Challenge</b>: what is the value of <code>someNumber</code> at the end of the above code snippet? Walk through each line of code and try to compute the value of <code>someNumber</code> yourself. Then, paste the snippet above into repl.it to check your answer.
     </p>
-    
+
   </div>
-    
+
 </div>
 </div>
 </body>

@@ -3,12 +3,12 @@
 <head>
 
   <title>AC Workshop - Activity: Functions</title>
-  
+
   <link rel="stylesheet" type="text/css" href="styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/styles/default.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
-  
+
 </head>
 <body>
 <div class="container">
@@ -38,10 +38,10 @@
 
   <div class="content">
     <h1>Activity: Functions</h1>
-    
+
     <h2>What's wrong with this code? List out every problem:</h2>
 
-    <pre><code>var 3TimesArgument = func(argument) {
+    <pre><code>const 3TimesArgument = func(argument) {
   arg * 3 return
 }</code></pre>
 
@@ -60,7 +60,7 @@
       I set up the conditional part of the <code>isPerfectSquare</code> function. It works because if the square-root of a number and the <i>rounded down value</i> of that square-root is the same then it's a whole number, and thus the input number is a perfect square.
     </p>
 
-    <pre><code>var isPerfectSquare = function(arg) {
+    <pre><code>const isPerfectSquare = function(arg) {
   // Some code belongs here.
   // Hint: what variable needs to be created and assigned?
   if(Math.floor(sqrtOfArg) == sqrtOfArg) {
@@ -101,11 +101,11 @@ isPerfectSquare(2); // return false
       Please do <b>NOT</b> put this into repl.it, I do <b>NOT</b> want to actually run it until you figure it out! Trust me, you'll appreciate the practice. Instead test yourself by stepping through it line by line yourself. I suggest taking out a pen(cil) and paper or using sublime as a notepad to keep track of variable values as you go line by line
     </p>
 
-    <pre><code>var MysteryFunction = function(input1, input2) {
+    <pre><code>const MysteryFunction = function(input1, input2) {
   return MysteryFunction2(input1) + MysteryFunction2(input2)
 }
 
-var MysteryFunction2 = function(input) {
+const MysteryFunction2 = function(input) {
   if (input > 10) {
     return 10
   } else {
@@ -119,14 +119,14 @@ console.log(MysteryFunction(15, 7))</code></pre>
 
     <h2>Let's try a harder one</h2>
 
-    <pre><code>var MysteryFunction = function(input) {
+    <pre><code>const MysteryFunction = function(input) {
   if (MysteryFunction2(input % 5) > 10) {
     return MysteryFunction2(input % 3)
   }
   return MysteryFunction2(input % 4)
 }
 
-var MysteryFunction2 = function(input) {
+const MysteryFunction2 = function(input) {
   return input * 3
 }
 
@@ -136,15 +136,15 @@ console.log(MysteryFunction(23))</code></pre>
 
     <h2>Here's one with loops</h2>
 
-    <pre><code>var MysteryFunction = function(input) {
+    <pre><code>const MysteryFunction = function(input) {
   if (input.length > 4) {
     return MysteryFunction2(input, 3)
   }
   return MysteryFunction2(input, 2)
 }
 
-var MysteryFunction2 = function(input1, input2) {
-  for (i = input2; i >= 0; i--) {
+const MysteryFunction2 = function(input1, input2) {
+  for (let i = input2; i >= 0; i--) {
     input1.push(i)
   }
   return input1
@@ -154,7 +154,7 @@ var MysteryFunction2 = function(input1, input2) {
 console.log(MysteryFunction([4,5,6]))
 // What about this call?
 console.log(MysteryFunction([10,9,8,7,6])</code></pre>
-    
+
   </div>
 
 </div>
