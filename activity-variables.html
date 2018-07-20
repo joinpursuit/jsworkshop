@@ -95,7 +95,7 @@ const 3TimesThree
       You can do math on variables too as long as they are numbers! Let's find out your birth year by subtracting your age (let's use the variable you defined earlier) from the current year:
     </p>
 
-    <pre><code>const currentYear = 2018
+    <pre><code>const currentYear = <script> document.write((new Date()).getFullYear())</script>
 const myBirthYear = currentYear - myAge
 console.log("My birth year is " + myBirthYear)</code></pre>
 
