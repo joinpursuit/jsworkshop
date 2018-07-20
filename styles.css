@@ -45,6 +45,7 @@ body {
   color: white;
   text-decoration: none;
   transition: color 0.3s ease-in-out;
+  font-weight: 100;
 
 }
 .navigation-link-item a:visited {
