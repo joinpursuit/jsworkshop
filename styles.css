@@ -47,11 +47,6 @@ body {
   transition: color 0.3s ease-in-out;
   font-weight: lighter;
 }
-
-.navigation-link-item strong {
-  font-weight: bolder;
-}
-
 .navigation-link-item a:visited {
   color: white;
 
