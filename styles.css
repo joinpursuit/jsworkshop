@@ -62,8 +62,6 @@ body {
 }
 .content > * {
   max-width: 1024px;
-  margin-left: auto;
-  margin-right: auto;
 }
 .home-anchor {
   width: 100%;
